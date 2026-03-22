@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blog | Oviya Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Lora:italic,wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; scroll-behavior: smooth; overflow-x: hidden; }
+        .serif-font { font-family: 'Lora', serif; } 
+        
+        .fluid-h1 {
+            font-size: clamp(2.2rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .blog-header { background: linear-gradient(to bottom, #fff5f7 0%, #ffffff 100%); }
+
+        .dropcap::first-letter {
+            font-family: 'Inter';
+            font-weight: 900;
+            float: left;
+            font-size: clamp(3.5rem, 10vw, 5rem);
+            line-height: 0.85;
+            padding-right: 0.75rem;
+            padding-top: 0.5rem;
+            color: #ff4d6d;
+        }
+
+        .pullquote {
+            font-size: clamp(1.4rem, 5vw, 2.25rem);
+            line-height: 1.2;
+        }
+
+        @media (max-width: 640px) {
+            nav { padding: 1rem !important; }
+            .fluid-h1 { line-height: 1; }
+            article { padding-bottom: 5rem !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="p-4 md:p-8 flex justify-between items-center fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-50">
+        <a href="index.html" class="font-black text-lg md:text-xl uppercase tracking-tighter">OVIYA.</a>
+        <a href="index.html" class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest px-4 md:px-6 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-all">Back to Hub</a>
+    </nav>
+
+    <header class="blog-header pt-32 md:pt-48 pb-12 md:pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-pink-500 mb-4 block">Social Commentary</span>
+            <h1 class="fluid-h1 mb-6">The Paradox of <br class="hidden md:block">Connection</h1>
+            <p class="serif-font text-lg md:text-xl text-gray-500 italic max-w-2xl mx-auto">Why Gen Z feels lonely despite being digitally hyperconnected.</p>
+        </div>
+    </header>
+
+    <article class="max-w-3xl mx-auto px-6 pb-20 md:pb-32">
+        <div class="serif-font text-lg md:text-xl leading-relaxed text-gray-700 space-y-8 md:space-y-10 text-justify md:text-left">
+            
+            <p class="dropcap">
+                In an age where every moment of our lives is captured, curated, and shared, it's easy to assume that younger generations, especially Gen Z, are more connected than ever. Born into a world of Instagram, TikTok, and instant messaging, they seem to have an endless stream of digital friends and followers.
+            </p>
+
+            <p>
+                Yet, beneath this vast web of connectivity, many Gen Z individuals are grappling with a profound sense of loneliness. This paradox—being surrounded by digital connections yet feeling isolated—has become a defining tension for this generation. Studies show that despite being hyperconnected, Gen Z is reporting higher rates of loneliness compared to previous generations.
+            </p>
+
+            <div class="my-10 md:my-16 py-8 md:py-10 border-y border-pink-100 text-center">
+                <blockquote class="pullquote font-black uppercase tracking-tight text-gray-900">
+                    "Behind every screen is a human being, craving depth, authenticity, and belonging." 
+                </blockquote>
+            </div>
+
+            <p>
+                One of the key drivers is the nature of social media itself. Platforms offer a constant stream of content, but it's also a carefully edited reality. Gen Z scrolls through highlight reels while their own everyday experiences feel muted by comparison, creating a sense of inadequacy.
+            </p>
+
+            <p>
+                Additionally, digital interactions often prioritize quantity over quality. Sending a flurry of DMs lacks the emotional depth and support provided by real-world friendships. Furthermore, the pressure to be constantly "on" leads to digital fatigue and a sense of being unseen despite constant interaction.
+            </p>
+
+            <p>
+                However, some are finding balance by setting boundaries and seeking offline communities. The future depends on using social media as a tool for connection, not a substitute for real-world presence.
+            </p>
+
+        </div>
+
+        <div class="mt-16 md:mt-20 p-8 md:p-12 bg-gray-50 rounded-3xl text-center">
+            <h4 class="font-black uppercase text-sm md:text-base mb-4 md:mb-6">View Full Analysis</h4>
+            <a href="THE_PARADOX_OF_CONNECTION.pdf" target="_blank" class="inline-block w-full md:w-auto px-8 md:px-10 py-4 bg-black text-white text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-pink-500 transition-all rounded-lg md:rounded-none">
+                Download PDF Version
+            </a>
+        </div>
+    </article>
+
+    <footer class="py-12 md:py-20 text-center border-t border-gray-100 bg-white">
+        <p class="text-[8px] md:text-[10px] text-gray-400 uppercase tracking-[0.4em]">Oviya Portfolio &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

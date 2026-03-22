@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Works | Oviya Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #fff; scroll-behavior: smooth; overflow-x: hidden; }
+        .script-font { font-family: 'Space Mono', monospace; }
+        
+        /* Fluid Header for Mobile */
+        .fluid-h1 {
+            font-size: clamp(3rem, 12vw, 8rem);
+            line-height: 0.9;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .ad-card { 
+            background: #111; 
+            border: 1px solid rgba(255,255,255,0.05); 
+            transition: all 0.3s ease; 
+        }
+        .ad-card:hover { border-color: #e68fb4; }
+        
+        .tag { color: #e68fb4; font-weight: 900; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; }
+        
+        .btn-download { 
+            background: #fff; 
+            color: #000; 
+            padding: 14px 28px; 
+            font-weight: 900; 
+            font-size: 10px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            transition: all 0.3s; 
+            border-radius: 4px;
+        }
+        .btn-download:hover { background: #e68fb4; color: #fff; transform: translateY(-2px); }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem !important; }
+            .fluid-h1 { text-align: center; }
+            .sticky { position: relative !important; top: 0 !important; }
+            .mobile-center { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="p-4 md:p-8 flex justify-between items-center fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="font-black text-lg md:text-xl uppercase tracking-tighter">OVIYA.</a>
+        <a href="index.html" class="text-[9px] md:text-xs font-bold uppercase tracking-widest px-4 md:px-6 py-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">Back to Hub</a>
+    </nav>
+
+    <main class="pt-32 md:pt-48 pb-20 px-6 max-w-6xl mx-auto">
+        
+        <header class="mb-16 md:mb-24">
+            <h1 class="fluid-h1 mb-6">Commercial <br><span class="text-zinc-800">Copy</span></h1>
+            <p class="text-gray-500 max-w-lg mx-auto md:mx-0 text-center md:text-left">Transforming brand messages into cinematic narratives and engaging digital campaigns.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mb-32 items-start">
+            
+            <div class="md:col-span-1 md:sticky md:top-32 mobile-center">
+                <span class="text-[10px] font-bold text-pink-400 uppercase tracking-[0.3em] mb-2 block">Campaign 03</span>
+                <h2 class="text-3xl md:text-4xl font-black uppercase mt-2 mb-6">The White <br class="hidden md:block">Flake Mystery</h2>
+                
+                <div class="space-y-6 text-sm text-gray-400 leading-relaxed mb-10">
+                    <p><strong class="text-white">Concept:</strong> A Noir Detective parody.</p>
+                    <p><strong class="text-white">The Gist:</strong> A serious detective investigates mysterious white powder on a jacket, only to reveal it's a simple case of dandruff solved by Head & Shoulders.</p>
+                    <p><strong class="text-white">Tone:</strong> Dramatic, Suspenseful, Humorous.</p>
+                </div>
+                
+                <a href="THE_DANDRUFF_DETECTIVE_CASE.pdf" target="_blank" class="btn-download inline-block w-full md:w-auto text-center">Download Full Script PDF</a>
+            </div>
+
+            <div class="md:col-span-2">
+                <div class="ad-card p-8 md:p-12 rounded-3xl border-l-4 border-l-pink-500 shadow-2xl">
+                    <div class="script-font text-sm md:text-base leading-loose">
+                        <p class="tag mb-3">Scene 1 - The Setup</p>
+                        <p class="text-white mb-10 italic text-lg md:text-xl">"White powder... everywhere. This city has a problem."</p>
+                        
+                        <p class="tag mb-3">The Twist</p>
+                        <p class="text-gray-400 mb-10">The detective turns the evidence tray. Not powder. Dandruff flakes. He sighs: <span class="text-white italic">"This isn't a crime... it's dandruff."</span></p>
+
+                        <p class="tag mb-3">The Tagline</p>
+                        <p class="text-pink-300 font-black text-2xl md:text-3xl uppercase tracking-tighter leading-none">
+                            "Solve dandruff <br class="md:hidden"> before it becomes <br class="md:hidden"> a case."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-16 text-center border-t border-white/5">
+        <p class="text-[8px] md:text-[10px] uppercase tracking-[0.5em] opacity-30">Oviya Portfolio &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

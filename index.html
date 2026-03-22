@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oviya | Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f4f4f4; }
+        
+        /* 1. Hero Setup */
+        .sticky-viewport {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; 
+        }
+
+        .bg-art-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;             
+            will-change: transform, opacity;
+            padding: 0 5vw; 
+        }
+
+        .bg-portfolio-text {
+            font-size: clamp(3.5rem, 12vw, 16.5rem) !important; 
+            font-weight: 900;
+            color: #e68fb4; 
+            text-transform: uppercase;
+            letter-spacing: -0.06em; 
+            line-height: 0.8;
+            text-align: center;
+            user-select: none;
+            width: 100%;
+        }
+
+        #subject-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) translateX(20%); 
+            height: 85vh;
+            width: auto;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0;
+            will-change: transform, opacity;
+            display: flex;
+            align-items: flex-end;
+        }
+        #subject-container img { height: 100%; width: auto; object-fit: contain; }
+
+        .ref-label {
+            position: absolute;
+            font-size: clamp(9px, 0.8vw, 11px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            z-index: 30;
+            color: #1a1a1a;
+        }
+
+        /* 2. Content Alignment & Layering */
+        .content-wrapper {
+            position: relative;
+            z-index: 20;
+            background: white !important;
+            color: #1a1a1a;
+            box-shadow: 0 -30px 60px rgba(0,0,0,0.05);
+            border-radius: 60px 60px 0 0;
+            margin-top: -2vh;
+        }
+
+        /* THE FIX: Pink-Fill "Works" Title */
+        .outline-text { 
+            font-size: clamp(3.5rem, 12vw, 8.5rem); 
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffe5ec !important; /* Soft pink fill */
+            -webkit-text-stroke: 2.5px #e68fb4 !important; /* Bold pink stroke */
+            opacity: 1 !important; 
+            letter-spacing: -0.02em;
+            display: block;
+            margin-bottom: 2rem;
+            line-height: 1;
+        }
+        
+        .outline-text-dark { -webkit-text-stroke: 1.5px #1a1a1a; color: white; }
+
+        /* --- MOBILE ALIGNMENT FIXES --- */
+        @media (max-width: 640px) {
+            .bg-portfolio-text { 
+                font-size: 18vw !important; 
+                padding: 0 2vw !important;
+            }
+            #subject-container { 
+                height: 65vh !important; 
+            }
+            /* Align "Works" header to center on mobile */
+            .outline-text {
+                font-size: 4rem !important;
+                text-align: center;
+                -webkit-text-stroke: 1.5px #e68fb4;
+            }
+            /* Stack the Intro sections and center them */
+            .intro-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                text-align: center !important;
+                align-items: center !important;
+            }
+            .intro-grid .sticky { position: relative !important; top: 0 !important; margin-bottom: 2rem; }
+
+            .ref-label { font-size: 8px !important; top: 2rem !important; }
+            .ref-label.bottom-8 {
+                left: 50% !important;
+                transform: translateX(-50%);
+                text-align: center;
+                width: 80%;
+                bottom: 1.5rem !important;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="scroll-container" style="height: 300vh;">
+        <div class="sticky-viewport">
+            <div class="ref-label top-8 left-8">Oviya R.</div>
+            <div class="ref-label top-8 left-1/2 -translate-x-1/2">Creative Designer</div>
+            <div class="ref-label top-8 right-8">Content Creator</div>
+            <div class="ref-label bottom-8 left-8 max-w-[250px] normal-case tracking-normal text-left opacity-70">
+                
+            </div>
+
+            <div class="bg-art-layer">
+                <h2 class="bg-portfolio-text">PORTFOLIO</h2>
+            </div>
+
+            <div id="subject-container">
+                <img src="subject.png" alt="Oviya Character">
+            </div>
+        </div>
+    </div>
+
+    <section class="content-wrapper">
+        <div class="max-w-6xl mx-auto px-6 py-32">
+            <div class="intro-grid">
+                <div class="md:sticky md:top-24 h-fit">
+                    <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-pink-400 mb-4">Introduction</h2>
+                    <h3 class="text-6xl md:text-7xl font-black uppercase leading-[0.9] mb-8">
+                        Oviya R.<br>
+                        <span class="outline-text-dark">Creative</span><br>
+                        Visionary
+                    </h3>
+                </div>
+                <div class="space-y-10">
+                    <p class="text-2xl leading-relaxed font-medium text-gray-800">
+                        I’m a media student with a strong passion for <span class="text-pink-500 font-bold">scriptwriting</span>, creative writing, and graphic design.
+                    </p>
+                    <div class="space-y-6 text-gray-500 leading-loose">
+                        <p>I enjoy bringing ideas to life through words and visuals, blending creativity with purpose.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
+            <h2 class="outline-text uppercase mb-16">Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
+                    <img src="SCRIPT.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Scripts">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Narrative</span>
+                        <h3 class="text-3xl font-black uppercase mb-4">Scriptwriting</h3>
+                        <a href="script-detail.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Explore</a>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
+                    <img src="GRAPHIC.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Graphic Design">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Visual Strategy</span>
+                        <h3 class="text-3xl font-black uppercase mb-4">Graphic Design</h3>
+                        <a href="designs.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Designs</a>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
+                    <img src="AD.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Ad Works">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Commercial</span>
+                        <h3 class="text-3xl font-black uppercase mb-4">Ad Works</h3>
+                        <a href="ads.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Campaigns</a>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
+                    <img src="blog.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Blog">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Long Form</span>
+                        <h3 class="text-3xl font-black uppercase mb-4">The Blog</h3>
+                        <a href="blog.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Read Stories</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="max-w-6xl mx-auto py-24 px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-gray-100 bg-gray-50/50 rounded-b-[60px]">
+            <div class="text-center md:text-left">
+                <p class="font-bold">Media Student / Freelancer</p>
+                <p class="text-gray-400 uppercase text-[10px]">2023 - Present</p>
+            </div>
+            <div class="text-center md:text-left">
+                <h3 class="font-bold uppercase tracking-widest mb-6 border-b pb-2">Softwares</h3>
+                <div class="flex justify-center md:justify-start gap-6 font-black opacity-30 text-xl italic"><span>Ps</span><span>Ai</span></div>
+            </div>
+            <div class="text-center md:text-left">
+                <h3 class="font-bold uppercase tracking-widest mb-6 border-b pb-2">Connect</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="mailto:oviyars2006@email.com" class="hover:text-pink-500 font-bold">oviyars2006@email.com</a></li>
+                    <li><a href="https://www.instagram.com/_ovi.yahhhh/" class="hover:text-pink-500 transition-colors">Instagram</a></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollContainer = document.getElementById('scroll-container');
+            const subject = document.getElementById('subject-container');
+            const bgArt = document.querySelector('.bg-art-layer');
+            
+            const scrollTop = window.pageYOffset;
+            const maxScroll = scrollContainer.offsetHeight - window.innerHeight;
+            const progress = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+
+            const scrollTrigger = 0.25;
+
+            // Background Fade
+            const bgProgress = Math.min(progress / scrollTrigger, 1);
+            bgArt.style.opacity = bgProgress;
+
+            // Subject Slide In
+            if (progress > scrollTrigger) {
+                const subjectProgress = (progress - scrollTrigger) / (1 - scrollTrigger);
+                subject.style.opacity = Math.min(subjectProgress * 4, 1);
+                const moveX = 20 - (subjectProgress * 20);
+                subject.style.transform = `translateX(-50%) translateX(${moveX}%)`;
+            } else {
+                subject.style.opacity = 0;
+                subject.style.transform = `translateX(-50%) translateX(20%)`;
+            }
+        });
+    </script>
+</body>
+</html>

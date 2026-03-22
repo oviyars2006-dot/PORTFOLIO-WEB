@@ -1,0 +1,161 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4; 
+    color: #1a1a1a;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* 2. Hero & Animation Layers */
+.sticky-viewport {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-art-layer {
+    position: absolute;
+    inset: 0; 
+    z-index: 1;
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    opacity: 0;             
+    will-change: transform, opacity;
+    padding: 0 5vw; 
+}
+
+.bg-portfolio-text {
+    font-size: clamp(3rem, 12vw, 16rem) !important; 
+    font-weight: 900;
+    color: #e68fb4;            
+    text-transform: uppercase; 
+    letter-spacing: -0.06em;   
+    line-height: 0.8;          
+    text-align: center;
+    user-select: none;
+    opacity: 1; 
+    width: 100%;
+    display: block;
+}
+
+#subject-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateX(100%); 
+    height: 85vh !important; 
+    width: auto;
+    z-index: 10; 
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    will-change: transform, opacity;
+}
+
+#subject-container img {
+    height: 100%;    
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* 3. Transition Section & PINK-FILL WORKS TITLE */
+.content-wrapper {
+    position: relative;
+    z-index: 20;
+    background: white !important;
+    box-shadow: 0 -30px 60px rgba(0,0,0,0.05);
+    border-radius: 40px 40px 0 0;
+    margin-top: -2vh;
+}
+
+/* THE FIX: Inside of "Works" is now a soft pink instead of white */
+.outline-text {
+    font-size: clamp(3.5rem, 12vw, 8.5rem); 
+    font-weight: 900;
+    text-transform: uppercase;
+    
+    /* Soft pink fill */
+    color: #ffe5ec; 
+    
+    /* Strong pink border */
+    -webkit-text-stroke: 2.5px #e68fb4; 
+    
+    opacity: 1 !important; 
+    letter-spacing: -0.02em;
+    display: block;
+    margin-bottom: 2rem;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Solid pink when you hover over it */
+.outline-text:hover {
+    color: #e68fb4;
+    cursor: default;
+}
+
+.outline-text-dark {
+    -webkit-text-stroke: 1.5px #1a1a1a;
+    color: white;
+}
+
+/* Reference Corner Labels */
+.ref-label {
+    position: absolute;
+    font-size: clamp(9px, 0.8vw, 11px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 30;
+    color: #1a1a1a;
+    opacity: 0.8;
+}
+
+/* --- MOBILE SPECIFIC FIXES --- */
+
+@media (max-width: 640px) {
+    .bg-portfolio-text {
+        font-size: 18vw !important; 
+        letter-spacing: -0.04em;
+        padding: 0 2vw !important; 
+    }
+
+    #subject-container {
+        height: 65vh !important; 
+    }
+
+    /* Centers and fills "Works" properly for mobile */
+    .outline-text {
+        font-size: 4rem !important;
+        text-align: center;
+        -webkit-text-stroke: 1.5px #e68fb4;
+        color: #ffe5ec; /* Keeps the soft pink inside on mobile */
+    }
+
+    .ref-label {
+        font-size: 8px !important;
+        top: 2rem !important; 
+    }
+    
+    .ref-label.bottom-8 {
+        left: 50% !important;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 80%;
+        bottom: 1.5rem !important;
+    }
+}

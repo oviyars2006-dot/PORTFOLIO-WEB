@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oviya | Scripts Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .script-text { font-family: 'Space Mono', monospace; line-height: 1.8; }
+        
+        /* Responsive Section Padding */
+        .project-section { 
+            min-height: 100vh; 
+            padding: 5rem 5vw; 
+            border-top: 1px solid #eee; 
+        }
+
+        /* FLUID TYPOGRAPHY: Scale 7XL down to 3rem on mobile automatically */
+        .fluid-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin: 1.5rem 0;
+        }
+
+        .hook-tag { color: #ff4d6d; font-weight: 900; letter-spacing: 0.1em; font-size: 0.7rem; }
+        
+        /* PDF Link Card Styling */
+        .pdf-link-card {
+            display: block;
+            width: 100%;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border: 2px dashed #e5e7eb;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .pdf-link-card:hover {
+            border-color: #ff4d6d;
+            background: #fff5f7;
+            transform: translateY(-5px);
+        }
+
+        /* RESPONSIVE OVERRIDES */
+        @media (max-width: 768px) {
+            .project-section { 
+                min-height: auto; 
+                padding: 4rem 1.5rem; 
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .sticky { 
+                position: relative !important; 
+                top: 0 !important; 
+            }
+            .script-text {
+                padding: 1.5rem !important;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <section id="project-1" class="project-section grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+        <div class="md:sticky md:top-24 h-fit">
+            <span class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Project 01</span>
+            <h2 class="fluid-title">Morning <br>Productivity</h2>
+            <p class="text-gray-500 max-w-sm mb-6">A short-form video script focusing on mental clarity and the power of starting with a single goal.</p>
+            
+            <a href="CONTENT WRITING.pdf" target="_blank" class="pdf-link-card group">
+                <h4 class="font-black uppercase text-xs tracking-widest text-gray-900">View Full Script PDF</h4>
+                <p class="text-[9px] text-gray-400 mt-1 uppercase">Direct Download</p>
+            </a>
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-12 rounded-3xl script-text shadow-inner">
+            <p class="hook-tag">[Hook]</p>
+            <p class="text-lg md:text-xl font-bold mb-6">Do you wake up feeling like you have so much to do... but no idea where to start?</p>
+            <p class="hook-tag">[Body]</p>
+            <div class="space-y-4 text-gray-600 mb-6">
+                <p>Most of us begin our mornings by reaching for our phones. Notifications, messages, social media—it all floods in before we've even had a moment to think for ourselves.</p>
+                <p>Instead, ask yourself: What is the one thing I need to get done today?</p>
+            </div>
+            <p class="hook-tag">[CTA]</p>
+            <p class="font-bold">Set one goal. And see how different your day feels.</p>
+        </div>
+    </section>
+
+    <section id="project-2" class="project-section grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 bg-gray-900 text-white">
+        <div class="md:sticky md:top-24 h-fit">
+            <span class="text-xs font-bold uppercase tracking-[0.3em] text-pink-400">Project 02</span>
+            <h2 class="fluid-title">Mindful <br>Break</h2>
+            <p class="text-gray-400 max-w-sm mb-6">Exploring how productivity comes from stepping away rather than pushing harder.</p>
+            
+            <a href="CONTENT WRITING.pdf" target="_blank" class="pdf-link-card bg-white/5 border-white/10 group">
+                <h4 class="font-black uppercase text-xs tracking-widest text-white">View Full Script PDF</h4>
+                <p class="text-[9px] text-gray-500 mt-1 uppercase">Direct Download</p>
+            </a>
+        </div>
+
+        <div class="bg-white/5 p-6 md:p-12 rounded-3xl script-text border border-white/10">
+            <p class="hook-tag">[Hook]</p>
+            <p class="text-lg md:text-xl font-bold mb-6 text-white">Do you ever feel tired even when you haven't done much?</p>
+            <p class="hook-tag">[Concept]</p>
+            <p class="text-gray-400 mb-6">Step outside for a short walk. No phone, no calls. Notice what's around you—the air, the sounds, the small details you usually ignore.</p>
+            <p class="hook-tag">[Result]</p>
+            <p class="text-pink-300 font-bold italic text-lg md:text-xl">Your mind feels lighter. Clearer.</p>
+        </div>
+    </section>
+
+    <section id="project-3" class="project-section grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+        <div class="md:sticky md:top-24 h-fit">
+            <span class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Project 03</span>
+            <h2 class="fluid-title italic">If Overthinking <br>Was a Person</h2>
+            <p class="text-gray-500 max-w-sm mb-6">A narrative POV script on how overthinking whispers and creates problems that don't exist.</p>
+            
+            <a href="CONTENT WRITING.pdf" target="_blank" class="pdf-link-card group">
+                <h4 class="font-black uppercase text-xs tracking-widest text-gray-900">View Full Script PDF</h4>
+                <p class="text-[9px] text-gray-400 mt-1 uppercase">Direct Download</p>
+            </a>
+        </div>
+
+        <div class="bg-pink-50 p-6 md:p-12 rounded-3xl script-text">
+            <p class="hook-tag">[The Persona]</p>
+            <p class="text-lg md:text-xl font-bold mb-6 text-gray-900">"Why did you say okay? Was that too dry?"</p>
+            <p class="hook-tag">[The Whisper]</p>
+            <div class="space-y-4 text-gray-700 mb-6">
+                <p>Overthinking doesn't shout. It whispers. It reminds you of things you said three years ago.</p>
+                <p>At night, when everything is quiet, that's when it gets louder. It analyzes your entire life.</p>
+            </div>
+            <p class="hook-tag">[Realization]</p>
+            <p class="text-lg md:text-xl font-black text-gray-900 italic">Not every thought deserves your attention.</p>
+        </div>
+    </section>
+
+    <div class="p-10 text-center">
+        <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-gray-300 hover:text-pink-500 transition-colors">↑ Back to Top</a>
+    </div>
+
+</body>
+</html>
