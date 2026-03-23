@@ -83,13 +83,12 @@
             margin-top: -2vh;
         }
 
-        /* THE FIX: Pink-Fill "Works" Title */
         .outline-text { 
             font-size: clamp(3.5rem, 12vw, 8.5rem); 
             font-weight: 900;
             text-transform: uppercase;
-            color: #ffe5ec !important; /* Soft pink fill */
-            -webkit-text-stroke: 2.5px #e68fb4 !important; /* Bold pink stroke */
+            color: #ffe5ec !important; 
+            -webkit-text-stroke: 2.5px #e68fb4 !important; 
             opacity: 1 !important; 
             letter-spacing: -0.02em;
             display: block;
@@ -108,13 +107,11 @@
             #subject-container { 
                 height: 65vh !important; 
             }
-            /* Align "Works" header to center on mobile */
             .outline-text {
                 font-size: 4rem !important;
                 text-align: center;
                 -webkit-text-stroke: 1.5px #e68fb4;
             }
-            /* Stack the Intro sections and center them */
             .intro-grid {
                 display: flex !important;
                 flex-direction: column !important;
@@ -145,10 +142,7 @@
             <div class="ref-label top-8 left-8">Oviya R.</div>
             <div class="ref-label top-8 left-1/2 -translate-x-1/2">Creative Designer</div>
             <div class="ref-label top-8 right-8">Content Writer</div>
-            <div class="ref-label bottom-8 left-8 max-w-[250px] normal-case tracking-normal text-left opacity-70">
-                
-            </div>
-
+            
             <div class="bg-art-layer">
                 <h2 class="bg-portfolio-text">PORTFOLIO</h2>
             </div>
@@ -183,10 +177,36 @@
         
         <div class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
             <h2 class="outline-text uppercase mb-16">Works</h2>
+
+            <div class="group relative overflow-hidden rounded-3xl bg-gray-950 aspect-[21/9] shadow-2xl mb-12 border border-pink-500/20">
+                <img src="thumbnail.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" alt="Award Winning Film">
+                
+                <div class="absolute top-6 left-6 z-20">
+                    <div class="bg-pink-500 text-white text-[9px] md:text-[10px] font-black px-4 py-1.5 uppercase tracking-widest rounded-full shadow-lg">
+                        🏆 1ST PLACE WINNER
+                    </div>
+                </div>
+
+                <div class="relative z-10 h-full p-8 md:p-12 flex flex-col justify-end bg-gradient-to-t from-black via-transparent text-white">
+                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] text-pink-400 mb-2">Short Film</span>
+                    <h3 class="text-3xl md:text-5xl font-black uppercase mb-6 tracking-tighter">Your Film Title</h3>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 md:items-center">
+                        <div class="text-[10px] font-bold uppercase border-l-2 border-pink-500 pl-4">
+                            Written & Directed by <br class="md:hidden"> <span class="text-pink-400">Oviya R.</span>
+                        </div>
+                        <div class="flex gap-4 md:ml-auto">
+                            <a href="https://www.youtube.com/watch?v=HYD_O6A3NrA" target="_blank" class="px-6 py-3 bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Watch Film</a>
+                            <a href="THE LAST STEP.pdf" target="_blank" class="px-6 py-3 bg-transparent border border-white/40 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">Read Script</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="SCRIPT.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Scripts">
-                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                    <img src="SCRIPT.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Narrative</span>
                         <h3 class="text-3xl font-black uppercase mb-4">Scriptwriting</h3>
                         <a href="script-detail.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Explore</a>
@@ -194,8 +214,8 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="GRAPHIC.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Graphic Design">
-                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                    <img src="GRAPHIC.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Visual Strategy</span>
                         <h3 class="text-3xl font-black uppercase mb-4">Graphic Design</h3>
                         <a href="designs.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Designs</a>
@@ -203,8 +223,8 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="AD.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Ad Works">
-                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                    <img src="AD.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Commercial</span>
                         <h3 class="text-3xl font-black uppercase mb-4">Ad Works</h3>
                         <a href="ads.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Campaigns</a>
@@ -212,8 +232,8 @@
                 </div>
 
                 <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="blog.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Blog">
-                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
+                    <img src="blog.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Long Form</span>
                         <h3 class="text-3xl font-black uppercase mb-4">The Blog</h3>
                         <a href="blog.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Read Stories</a>
@@ -253,11 +273,9 @@
 
             const scrollTrigger = 0.25;
 
-            // Background Fade
             const bgProgress = Math.min(progress / scrollTrigger, 1);
             bgArt.style.opacity = bgProgress;
 
-            // Subject Slide In
             if (progress > scrollTrigger) {
                 const subjectProgress = (progress - scrollTrigger) / (1 - scrollTrigger);
                 subject.style.opacity = Math.min(subjectProgress * 4, 1);
