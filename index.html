@@ -104,9 +104,7 @@
                 font-size: 18vw !important; 
                 padding: 0 2vw !important;
             }
-            #subject-container { 
-                height: 65vh !important; 
-            }
+            #subject-container { height: 65vh !important; }
             .outline-text {
                 font-size: 4rem !important;
                 text-align: center;
@@ -119,15 +117,7 @@
                 align-items: center !important;
             }
             .intro-grid .sticky { position: relative !important; top: 0 !important; margin-bottom: 2rem; }
-
             .ref-label { font-size: 8px !important; top: 2rem !important; }
-            .ref-label.bottom-8 {
-                left: 50% !important;
-                transform: translateX(-50%);
-                text-align: center;
-                width: 80%;
-                bottom: 1.5rem !important;
-            }
         }
 
         @media (min-width: 1024px) {
@@ -164,9 +154,9 @@
                         Visionary
                     </h3>
                 </div>
-                <div class="space-y-10">
+                <div class="space-y-10 text-center md:text-left">
                     <p class="text-2xl leading-relaxed font-medium text-gray-800">
-                        I’m a media student with a strong passion for <span class="text-pink-500 font-bold">scriptwriting</span>, creative writing, and graphic design.
+                        I’m a media student with a strong passion for <span class="text-pink-500 font-bold">Content Writing</span>, creative writing, and graphic design.
                     </p>
                     <div class="space-y-6 text-gray-500 leading-loose">
                         <p>I enjoy bringing ideas to life through words and visuals, blending creativity with purpose.</p>
@@ -179,22 +169,14 @@
             <h2 class="outline-text uppercase mb-16">Works</h2>
 
             <div class="group relative overflow-hidden rounded-3xl bg-gray-950 aspect-[21/9] shadow-2xl mb-12 border border-pink-500/20">
-                <img src="thumbnail.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" alt="Award Winning Film">
-                
+                <img src="thumbnail.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000">
                 <div class="absolute top-6 left-6 z-20">
-                    <div class="bg-pink-500 text-white text-[9px] md:text-[10px] font-black px-4 py-1.5 uppercase tracking-widest rounded-full shadow-lg">
-                        🏆 1ST PLACE WINNER
-                    </div>
+                    <div class="bg-pink-500 text-white text-[9px] md:text-[10px] font-black px-4 py-1.5 uppercase tracking-widest rounded-full shadow-lg">🏆 1ST PLACE WINNER</div>
                 </div>
-
                 <div class="relative z-10 h-full p-8 md:p-12 flex flex-col justify-end bg-gradient-to-t from-black via-transparent text-white">
-                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] text-pink-400 mb-2">Short Film</span>
                     <h3 class="text-3xl md:text-5xl font-black uppercase mb-6 tracking-tighter">THE LAST STEP</h3>
-                    
                     <div class="flex flex-col md:flex-row gap-6 md:items-center">
-                        <div class="text-[10px] font-bold uppercase border-l-2 border-pink-500 pl-4">
-                            Written & Directed by <br class="md:hidden"> <span class="text-pink-400">Oviya R.</span>
-                        </div>
+                        <div class="text-[10px] font-bold uppercase border-l-2 border-pink-500 pl-4">Written & Directed by <span class="text-pink-400">Oviya R.</span></div>
                         <div class="flex gap-4 md:ml-auto">
                             <a href="https://www.youtube.com/watch?v=HYD_O6A3NrA" target="_blank" class="px-6 py-3 bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Watch Film</a>
                             <a href="THE LAST STEP.pdf" target="_blank" class="px-6 py-3 bg-transparent border border-white/40 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">Read Script</a>
@@ -205,38 +187,47 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="SCRIPT.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <img src="write.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
                     <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Narrative</span>
-                        <h3 class="text-3xl font-black uppercase mb-4">Scriptwriting</h3>
-                        <a href="script-detail.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Explore</a>
+                        <h3 class="text-3xl font-black uppercase mb-4">Writing & Copy</h3>
+                        <a href="script-detail.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View All</a>
+                    </div>
+                </div>
+
+                <div onclick="openLogoGallery()" class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl cursor-pointer">
+                    <img src="LO.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Identity</span>
+                        <h3 class="text-3xl font-black uppercase mb-4">Logo Collection</h3>
+                        <div class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest group-hover:bg-pink-500 group-hover:text-white transition-all">View 6 Logos</div>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="GRAPHIC.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <img src="design.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
                     <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Visual Strategy</span>
                         <h3 class="text-3xl font-black uppercase mb-4">Graphic Design</h3>
-                        <a href="designs.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Designs</a>
+                        <a href="ads.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Designs</a>
+                    </div>
+                </div> 
+
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
+                    <img src="ui.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Product</span>
+                        <h3 class="text-3xl font-black uppercase mb-4">UI/UX Design</h3>
+                        <a href="ui-design.html" class="w-fit px-8 py-3 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">Case Study</a>
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="AD.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                <div onclick="openPhotoGallery()" class="md:col-span-2 group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[21/9] shadow-xl cursor-pointer">
+                    <img src="photo.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000">
                     <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 text-white">
-                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Commercial</span>
-                        <h3 class="text-3xl font-black uppercase mb-4">Ad Works</h3>
-                        <a href="ads.html" class="w-fit px-6 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Campaigns</a>
-                    </div>
-                </div>  
-                
-                <div class="group relative overflow-hidden rounded-3xl bg-gray-900 aspect-[16/10] shadow-xl">
-                    <img src="UI.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000">
-                    <div class="relative z-10 h-full p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-transparent text-white">
-                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Product Design</span>
-                        <h3 class="text-3xl font-black uppercase mb-4">UI/UX Interface Design</h3>
-                        <a href="ui-design.html" class="w-fit px-8 py-3 bg-white text-black text-[10px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">View Prototypes</a>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-pink-400 mb-2">Visuals</span>
+                        <h3 class="text-3xl md:text-5xl font-black uppercase mb-4">Photography</h3>
+                        <div class="w-fit px-8 py-3 bg-white text-black text-[10px] font-bold uppercase tracking-widest group-hover:bg-pink-500 group-hover:text-white transition-all">View 11 Captures</div>
                     </div>
                 </div>
             </div>
@@ -261,30 +252,114 @@
         </footer>
     </section>
 
+    <div id="logo-overlay" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden flex-col items-center justify-center p-6">
+        <button onclick="closeLogoGallery()" class="absolute top-8 right-8 text-white text-[10px] font-bold uppercase tracking-widest border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all">Close [ESC]</button>
+        <div class="max-w-4xl w-full flex flex-col items-center">
+            <div class="relative w-full aspect-square md:aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-white/5">
+                <img id="current-logo-img" src="" class="w-full h-full object-contain p-12 transition-all duration-500">
+            </div>
+            <div class="mt-8 text-center max-w-2xl">
+                <h4 id="current-logo-title" class="text-2xl font-black uppercase text-white mb-2">Title</h4>
+                <p id="current-logo-desc" class="text-gray-400 text-sm leading-relaxed mb-8">Description</p>
+                <div class="flex items-center justify-center gap-12">
+                    <button onclick="prevLogo()" class="text-pink-400 hover:text-white transition-colors">← PREV</button>
+                    <span id="logo-counter" class="text-[10px] font-bold tracking-[0.5em] text-white/40">01 / 06</span>
+                    <button onclick="nextLogo()" class="text-pink-400 hover:text-white transition-colors">NEXT →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="photo-overlay" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden flex-col items-center justify-center p-6">
+        <button onclick="closePhotoGallery()" class="absolute top-8 right-8 text-white text-[10px] font-bold uppercase tracking-widest border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all">Close [ESC]</button>
+        <div class="max-w-5xl w-full flex flex-col items-center">
+            <div class="relative w-full aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-white/5">
+                <img id="current-photo-img" src="" class="w-full h-full object-contain p-2 transition-all duration-500">
+            </div>
+            <div class="mt-8 text-center">
+                <div class="flex items-center justify-center gap-12">
+                    <button onclick="prevPhoto()" class="text-pink-400 hover:text-white font-black text-xs uppercase tracking-widest">← PREV</button>
+                    <span id="photo-counter" class="text-[10px] font-bold tracking-[0.5em] text-white/40">01 / 11</span>
+                    <button onclick="nextPhoto()" class="text-pink-400 hover:text-white font-black text-xs uppercase tracking-widest">NEXT →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // LOGO GALLERY DATA
+        const logoData = [
+            { img: 'daycare.jpeg', title: 'Little Nest', desc: 'A soft, playful logo for kids.' },
+            { img: 'haven.jpeg', title: 'Haven & Hue', desc: 'Minimal home decor identity.' },
+            { img: 'moveo.jpeg', title: 'Moveo', desc: 'Dynamic fitness movement logo.' },
+            { img: 'chip.PNG', title: 'Spiralato', desc: 'Modern street food identity.' },
+            { img: 'ice.PNG', title: 'Scooply', desc: 'Playful ice cream branding.' },
+            { img: 'துகிலினம்.PNG', title: 'துகிலினம்', desc: 'Traditional boutique identity.' }
+        ];
+
+        // PHOTOGRAPHY GALLERY DATA
+        const photoData = [
+            '1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', 
+            '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg', 
+            '9.jpeg', '10.jpeg', '11.jpeg'
+        ];
+
+        let currentLogoIdx = 0;
+        let currentPhotoIdx = 0;
+
+        // LOGO FUNCTIONS
+        function openLogoGallery() {
+            updateLogo();
+            document.getElementById('logo-overlay').classList.replace('hidden', 'flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLogoGallery() {
+            document.getElementById('logo-overlay').classList.replace('flex', 'hidden');
+            document.body.style.overflow = 'auto';
+        }
+        function updateLogo() {
+            const item = logoData[currentLogoIdx];
+            document.getElementById('current-logo-img').src = item.img;
+            document.getElementById('current-logo-title').innerText = item.title;
+            document.getElementById('current-logo-desc').innerText = item.desc;
+            document.getElementById('logo-counter').innerText = `0${currentLogoIdx + 1} / 06`;
+        }
+        function nextLogo() { currentLogoIdx = (currentLogoIdx + 1) % logoData.length; updateLogo(); }
+        function prevLogo() { currentLogoIdx = (currentLogoIdx - 1 + logoData.length) % logoData.length; updateLogo(); }
+
+        // PHOTO FUNCTIONS
+        function openPhotoGallery() {
+            updatePhoto();
+            document.getElementById('photo-overlay').classList.replace('hidden', 'flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePhotoGallery() {
+            document.getElementById('photo-overlay').classList.replace('flex', 'hidden');
+            document.body.style.overflow = 'auto';
+        }
+        function updatePhoto() {
+            document.getElementById('current-photo-img').src = photoData[currentPhotoIdx];
+            document.getElementById('photo-counter').innerText = `${currentPhotoIdx + 1 < 10 ? '0' : ''}${currentPhotoIdx + 1} / 11`;
+        }
+        function nextPhoto() { currentPhotoIdx = (currentPhotoIdx + 1) % photoData.length; updatePhoto(); }
+        function prevPhoto() { currentPhotoIdx = (currentPhotoIdx - 1 + photoData.length) % photoData.length; updatePhoto(); }
+
+        // SCROLL & ESC KEY
         window.addEventListener('scroll', () => {
             const scrollContainer = document.getElementById('scroll-container');
             const subject = document.getElementById('subject-container');
             const bgArt = document.querySelector('.bg-art-layer');
-            
-            const scrollTop = window.pageYOffset;
-            const maxScroll = scrollContainer.offsetHeight - window.innerHeight;
-            const progress = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+            const progress = Math.min(window.pageYOffset / (scrollContainer.offsetHeight - window.innerHeight), 1);
+            bgArt.style.opacity = Math.min(progress / 0.25, 1);
+            if (progress > 0.25) {
+                const sProgress = (progress - 0.25) / 0.75;
+                subject.style.opacity = Math.min(sProgress * 4, 1);
+                subject.style.transform = `translateX(-50%) translateX(${20 - (sProgress * 20)}%)`;
+            } else { subject.style.opacity = 0; }
+        });
 
-            const scrollTrigger = 0.25;
-
-            const bgProgress = Math.min(progress / scrollTrigger, 1);
-            bgArt.style.opacity = bgProgress;
-
-            if (progress > scrollTrigger) {
-                const subjectProgress = (progress - scrollTrigger) / (1 - scrollTrigger);
-                subject.style.opacity = Math.min(subjectProgress * 4, 1);
-                const moveX = 20 - (subjectProgress * 20);
-                subject.style.transform = `translateX(-50%) translateX(${moveX}%)`;
-            } else {
-                subject.style.opacity = 0;
-                subject.style.transform = `translateX(-50%) translateX(20%)`;
-            }
+        window.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") { closeLogoGallery(); closePhotoGallery(); }
         });
     </script>
 </body>
