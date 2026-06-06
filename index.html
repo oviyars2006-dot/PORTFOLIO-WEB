@@ -321,31 +321,68 @@
             document.getElementById('sports-hub-tagline').innerText = "Root Level Folder";
             document.getElementById('sports-back-btn-box').classList.replace('flex', 'hidden');
             const grid = document.getElementById('sports-dynamic-grid');
+            
+            // Render ordered layout: App Idea and Reel Script first with sports .PNG as background covers
             grid.innerHTML = `
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                    <div onclick="renderFolderContent('match_report')" class="p-6 bg-zinc-900 hover:bg-zinc-800 border border-white/5 hover:border-pink-500/30 rounded-2xl cursor-pointer transition-all flex flex-col justify-between aspect-[16/10]">
-                        <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 01</span>
-                        <h4 class="text-xl font-black uppercase text-white tracking-wide mt-4">Match Report</h4>
+                    <!-- 1. App Idea -->
+                    <div onclick="renderFolderContent('app_idea')" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all aspect-[16/10] border border-white/5 hover:border-pink-500/30">
+                        <img src="sports .PNG" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="App Idea Cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="relative z-20 p-6 h-full flex flex-col justify-between text-white">
+                            <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 01</span>
+                            <h4 class="text-xl font-black uppercase tracking-wide mt-4">App Idea</h4>
+                        </div>
                     </div>
-                    <div onclick="renderFolderContent('opinion_article')" class="p-6 bg-zinc-900 hover:bg-zinc-800 border border-white/5 hover:border-pink-500/30 rounded-2xl cursor-pointer transition-all flex flex-col justify-between aspect-[16/10]">
-                        <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 02</span>
-                        <h4 class="text-xl font-black uppercase text-white tracking-wide mt-4">Opinion Article</h4>
+                    
+                    <!-- 2. Reel Script -->
+                    <div onclick="renderFolderContent('reel_script')" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all aspect-[16/10] border border-white/5 hover:border-pink-500/30">
+                        <img src="sports .PNG" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Reel Script Cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="relative z-20 p-6 h-full flex flex-col justify-between text-white">
+                            <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 02</span>
+                            <h4 class="text-xl font-black uppercase tracking-wide mt-4">Reel Script</h4>
+                        </div>
                     </div>
-                    <div onclick="renderFolderContent('player_profile')" class="p-6 bg-zinc-900 hover:bg-zinc-800 border border-white/5 hover:border-pink-500/30 rounded-2xl cursor-pointer transition-all flex flex-col justify-between aspect-[16/10]">
-                        <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 03</span>
-                        <h4 class="text-xl font-black uppercase text-white tracking-wide mt-4">Player Profile</h4>
+
+                    <!-- 3. Match Report -->
+                    <div onclick="renderFolderContent('match_report')" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all aspect-[16/10] border border-white/5 hover:border-pink-500/30">
+                        <img src="sports .PNG" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Match Report Cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="relative z-20 p-6 h-full flex flex-col justify-between text-white">
+                            <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 03</span>
+                            <h4 class="text-xl font-black uppercase tracking-wide mt-4">Match Report</h4>
+                        </div>
                     </div>
-                    <div onclick="renderFolderContent('reel_script')" class="p-6 bg-zinc-900 hover:bg-zinc-800 border border-white/5 hover:border-pink-500/30 rounded-2xl cursor-pointer transition-all flex flex-col justify-between aspect-[16/10]">
-                        <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 04</span>
-                        <h4 class="text-xl font-black uppercase text-white tracking-wide mt-4">Reel Script</h4>
+
+                    <!-- 4. Opinion Article -->
+                    <div onclick="renderFolderContent('opinion_article')" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all aspect-[16/10] border border-white/5 hover:border-pink-500/30">
+                        <img src="sports .PNG" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Opinion Article Cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="relative z-20 p-6 h-full flex flex-col justify-between text-white">
+                            <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 04</span>
+                            <h4 class="text-xl font-black uppercase tracking-wide mt-4">Opinion Article</h4>
+                        </div>
                     </div>
-                    <div onclick="renderFolderContent('campaign_idea')" class="p-6 bg-zinc-900 hover:bg-zinc-800 border border-white/5 hover:border-pink-500/30 rounded-2xl cursor-pointer transition-all flex flex-col justify-between aspect-[16/10]">
-                        <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 05</span>
-                        <h4 class="text-xl font-black uppercase text-white tracking-wide mt-4">Campaign Idea</h4>
+
+                    <!-- 5. Player Profile -->
+                    <div onclick="renderFolderContent('player_profile')" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all aspect-[16/10] border border-white/5 hover:border-pink-500/30">
+                        <img src="sports .PNG" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Player Profile Cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="relative z-20 p-6 h-full flex flex-col justify-between text-white">
+                            <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 05</span>
+                            <h4 class="text-xl font-black uppercase tracking-wide mt-4">Player Profile</h4>
+                        </div>
                     </div>
-                    <div onclick="renderFolderContent('app_idea')" class="p-6 bg-zinc-900 hover:bg-zinc-800 border border-white/5 hover:border-pink-500/30 rounded-2xl cursor-pointer transition-all flex flex-col justify-between aspect-[16/10]">
-                        <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 06</span>
-                        <h4 class="text-xl font-black uppercase text-white tracking-wide mt-4">App Idea</h4>
+
+                    <!-- 6. Campaign Idea -->
+                    <div onclick="renderFolderContent('campaign_idea')" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all aspect-[16/10] border border-white/5 hover:border-pink-500/30">
+                        <img src="sports .PNG" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Campaign Idea Cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="relative z-20 p-6 h-full flex flex-col justify-between text-white">
+                            <span class="text-[10px] font-mono uppercase text-pink-400 tracking-wider">📁 Directory 06</span>
+                            <h4 class="text-xl font-black uppercase tracking-wide mt-4">Campaign Idea</h4>
+                        </div>
                     </div>
                 </div>
             `;
@@ -359,7 +396,7 @@
             const grid = document.getElementById('sports-dynamic-grid');
             
             let filesHTML = folder.files.map(f => `
-                <a href="${f.file}" target="_blank" class="p-5 bg-zinc-900 hover:bg-zinc-800/80 border border-white/10 hover:border-pink-400/40 rounded-xl transition-all flex items-center justify-between group">
+                <a href="${f.file}" target="_blank" class="p-5 bg-zinc-900 hover:bg-zinc-800/80 border border border-white/10 hover:border-pink-400/40 rounded-xl transition-all flex items-center justify-between group">
                     <div class="flex items-center gap-4">
                         <span class="text-xl">📄</span>
                         <span class="text-sm font-bold text-gray-300 group-hover:text-white transition-colors">${f.name}</span>
